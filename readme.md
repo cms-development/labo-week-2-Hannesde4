@@ -1,7 +1,7 @@
 ## CMS-Development
 #### tast week 2
 
-This is a simple Symfony setup so we get to know Symfony
+This is a simple Symfony setup to get familiar with Symfony
 
 This project includes:
 
