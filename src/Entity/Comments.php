@@ -20,7 +20,7 @@ class Comments
      * @ORM\ManyToOne(targetEntity="App\Entity\camps", inversedBy="reactions")
      * @ORM\JoinColumn(nullable=false)
      */
-    private $camp_id;
+    private $campId;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -30,7 +30,7 @@ class Comments
     /**
      * @ORM\Column(type="datetime")
      */
-    private $post_date;
+    private $date;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -42,14 +42,14 @@ class Comments
         return $this->id;
     }
 
-    public function getCampId(): ?camps
+    public function getCamp(): ?camps
     {
-        return $this->camp_id;
+        return $this->camp;
     }
 
-    public function setCampId(?camps $camp_id): self
+    public function setCamp(?camps $camp): self
     {
-        $this->camp_id = $camp_id;
+        $this->campId = $camp;
 
         return $this;
     }
@@ -66,14 +66,14 @@ class Comments
         return $this;
     }
 
-    public function getPostDate(): ?\DateTimeInterface
+    public function getDate(): ?\DateTimeInterface
     {
-        return $this->post_date;
+        return $this->date;
     }
 
-    public function setPostDate(\DateTimeInterface $post_date): self
+    public function setDate(\DateTimeInterface $date): self
     {
-        $this->post_date = $post_date;
+        $this->date = $date;
 
         return $this;
     }

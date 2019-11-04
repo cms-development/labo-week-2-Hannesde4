@@ -9,6 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * @ORM\Entity(repositoryClass="App\Repository\CampsRepository")
  */
+
 class Camps
 {
     /**
@@ -21,22 +22,22 @@ class Camps
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $camp_name;
+    private $title;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $camp_description;
+    private $description;
 
     /**
      * @ORM\Column(type="datetime")
      */
-    private $camp_time;
+    private $date;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $camp_owner;
+    private $owner;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -51,7 +52,7 @@ class Camps
     /**
      * @ORM\Column(type="boolean")
      */
-    private $in_the_picture;
+    private $featured;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
@@ -73,50 +74,50 @@ class Camps
         return $this->id;
     }
 
-    public function getCampName(): ?string
+    public function getTitle(): ?string
     {
-        return $this->camp_name;
+        return $this->title;
     }
 
-    public function setCampName(string $camp_name): self
+    public function setTitle(string $title): self
     {
-        $this->camp_name = $camp_name;
+        $this->title = $title;
 
         return $this;
     }
 
-    public function getCampDescription(): ?string
+    public function getDescription(): ?string
     {
-        return $this->camp_description;
+        return $this->description;
     }
 
-    public function setCampDescription(string $camp_description): self
+    public function setDescription(string $description): self
     {
-        $this->camp_description = $camp_description;
+        $this->description = $description;
 
         return $this;
     }
 
-    public function getCampTime(): ?\DateTimeInterface
+    public function getDate(): ?\DateTimeInterface
     {
-        return $this->camp_time;
+        return $this->date;
     }
 
-    public function setCampTime(\DateTimeInterface $camp_time): self
+    public function setDate(\DateTimeInterface $date): self
     {
-        $this->camp_time = $camp_time;
+        $this->date = $date;
 
         return $this;
     }
 
-    public function getCampOwner(): ?string
+    public function getOwner(): ?string
     {
-        return $this->camp_owner;
+        return $this->owner;
     }
 
-    public function setCampOwner(string $camp_owner): self
+    public function setOwner(string $owner): self
     {
-        $this->camp_owner = $camp_owner;
+        $this->owner = $owner;
 
         return $this;
     }
@@ -145,14 +146,14 @@ class Camps
         return $this;
     }
 
-    public function getInThePicture(): ?bool
+    public function getFeatured(): ?bool
     {
-        return $this->in_the_picture;
+        return $this->featured;
     }
 
-    public function setInThePicture(bool $in_the_picture): self
+    public function setFeatured(bool $featured): self
     {
-        $this->in_the_picture = $in_the_picture;
+        $this->featured = $featured;
 
         return $this;
     }
